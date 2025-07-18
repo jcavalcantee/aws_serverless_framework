@@ -15,10 +15,6 @@ module.exports.getChampion = async (event) => {
     };
   }
 
-  const headers = {
-    'X-Riot-Token': 'RGAPI-f1f587ff-1745-4c1d-8828-9962e775a98a'
-  }
-
   try {
     const response = await axios.get(`https://ddragon.leagueoflegends.com/cdn/15.14.1/data/en_US/champion/${champion}.json`, { headers })
 
