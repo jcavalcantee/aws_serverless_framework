@@ -1,0 +1,22 @@
+org: jcavalcantee
+service: awslambda
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  getChampion:
+    handler: handler.getChampion
+    memorySize: 128
+    timeout: 5
+    description: Lambda function to get user data.
+    architecture: arm64
+    environment:
+      STAGE: ${opt:stage, 'dev'}
+    events:
+      - httpApi:
+          path: /champion
+          method: get
