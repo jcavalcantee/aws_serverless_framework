@@ -83,6 +83,10 @@ To deploy the project to AWS:
    ```bash
    serverless deploy
 
+Here is a screenshot of the Lambda function in the AWS Console:
+
+![AWS Lambda function setup](./resources/aws_function_overview.jpg)
+
 ## Testing the API
 
 Once the Lambda function is deployed, you can test it by sending a `GET` request to the endpoint.
@@ -93,6 +97,10 @@ Once the Lambda function is deployed, you can test it by sending a `GET` request
     https://your_gateway_api_route.amazonaws.com/champion?champion=Ahri
 
     Replace `Ahri` with the name of any champion in League of Legends.
+
+The following image shows the successful API request in the browser:
+
+![API request in browser](./resources/request.jpg)
 
 ## Result
 
